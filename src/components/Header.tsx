@@ -14,7 +14,7 @@ const Header = () => {
   };
 
   return (
-    <header className="w-full mt-2 p-2">
+    <header className="w-[90%] mx-auto mt-2 p-2">
       {/* Top Bar */}
       <div className="w-full bg-white text-gray-600 text-sm py-2 border-b border-[#E9E9E9]">
         <div className="container mx-auto px-4">
