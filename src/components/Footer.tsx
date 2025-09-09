@@ -4,24 +4,26 @@ import Image from "next/image";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 import Link from "next/link";
 
+import logo from "../assets/footer_logo.png";
+
 export default function Footer() {
   return (
     <footer className="bg-teal-700 text-white py-8 sm:py-10 md:py-12">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 md:gap-6 lg:gap-8">
           {/* Logo & Description - 4 columns on large screens, full width on mobile */}
-          <div className="sm:col-span-2 lg:col-span-4">
+          <div className="sm:col-span-2 lg:col-span-4 ml-4">
             <div className="flex items-center">
               <Image
-                src="/logo.svg"
+                src={logo}
                 alt="Iconic Dental Logo"
-                width={60}
-                height={60}
+                width={150}
+                height={120}
                 className="mr-2"
               />
               {/* <span className="text-xl sm:text-2xl font-bold">Iconic<span className="block text-xs sm:text-sm font-normal">Dental</span></span> */}
             </div>
-            <p className="mt-3 md:mt-4 text-sm leading-relaxed max-w-xs">
+            <p className="mt-2 md:mt-2 text-sm leading-relaxed max-w-xs">
               At Iconic Dental, We have designed
               our own library- specially curated by
               high skilled designers and ceramists.

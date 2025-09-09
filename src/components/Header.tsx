@@ -14,9 +14,9 @@ const Header = () => {
   };
 
   return (
-    <header className="w-[90%] mx-auto mt-2 p-2">
+    <header className="mx-auto mt-2">
       {/* Top Bar */}
-      <div className="w-full bg-white text-gray-600 text-sm py-2 border-b border-[#E9E9E9]">
+      <div className="w-full bg-white text-gray-600 text-sm py-2 border-b border-[#E9E9E9] px-16">
         <div className="container mx-auto px-4">
           <div className="flex flex-col sm:flex-row items-center justify-between">
             <p className="text-center sm:text-left mb-2 sm:mb-0 text-xs sm:text-sm">
@@ -38,7 +38,7 @@ const Header = () => {
       </div>
 
       {/* Main Header */}
-      <div className="container mx-auto py-2 sm:py-4">
+      <div className="w-full container mx-auto py-2 sm:py-4 shadow-lg border-b border-[#E9E9E9] px-20">
         <div className="bg-white flex flex-row items-center justify-between w-full">
           {/* Logo */}
           <Link href="/" className="">
@@ -136,3 +136,4 @@ const Header = () => {
 };
 
 export default Header;
+

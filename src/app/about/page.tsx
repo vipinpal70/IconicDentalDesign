@@ -4,7 +4,6 @@
 // OR pages/about.tsx  (if using Pages Router)
 
 import Image from "next/image";
-import { Play, CheckCircle } from "lucide-react";
 import YouTubeVideo from "@/components/YouTubeVideo";
 import { useState } from "react";
 
@@ -20,7 +19,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="bg-white text-center px-4 sm:px-6 py-8 sm:py-10 md:py-20">
         <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-teal-700 px-2">
-          We Don't Just Design Smiles
+          We Don&apos;t Just Design Smiles
         </h1>
         <p className="text-base sm:text-lg md:text-xl text-gray-600 mt-2 font-semibold px-2">
           We Design Transformations
@@ -203,7 +202,7 @@ export default function AboutPage() {
               
               <p className="text-gray-600 mb-8">
                 At Iconic Dental, we invest in the latest digital tools to deliver accurate, 
-                efficient dental designs for today's leading labs. Our technology-
+                efficient dental designs for today&apos;s leading labs. Our technology-
                 driven approach means better consistency and smoother workflows 
                 for every project.
               </p>
@@ -236,7 +235,7 @@ export default function AboutPage() {
                   </div>
                   <h3 className="text-xl font-semibold mb-2">Committed to Quality</h3>
                   <p className="text-gray-600">
-                    Our team's passion for dental excellence shines through in every design and every result.
+                    Our team&apos;s passion for dental excellence shines through in every design and every result.
                   </p>
                 </div>
               </div>
