@@ -24,8 +24,9 @@ const HeroClient = React.forwardRef<HTMLDivElement, Props>(({ slidesCount, track
     applyTransform(normalized);
   }, [applyTransform, slidesCount]);
 
-  const next = useCallback(() => goTo(current + 1), [current, goTo]);
-  const prev = useCallback(() => goTo(current - 1), [current, goTo]);
+  // Navigation callbacks
+  useCallback(() => goTo(current + 1), [current, goTo]);
+  useCallback(() => goTo(current - 1), [current, goTo]);
 
   useEffect(() => {
     // ensure initial transform is applied
@@ -61,5 +62,7 @@ const HeroClient = React.forwardRef<HTMLDivElement, Props>(({ slidesCount, track
     </div>
   );
 });
+
+HeroClient.displayName = 'HeroClient';
 
 export default HeroClient;

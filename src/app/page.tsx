@@ -12,9 +12,9 @@ const services = [
 ];
 
 const aboutImg = "https://res.cloudinary.com/dbwuxxypx/image/upload/about_us_img_yautl7.png"
-const innovation1 = "https://res.cloudinary.com/dbwuxxypx/image/upload/innovation-1.png"
-const innovation2 = "https://res.cloudinary.com/dbwuxxypx/image/upload/innovation-2.png"
-const innovation3 = "https://res.cloudinary.com/dbwuxxypx/image/upload/innovation-3.png"
+// Innovation images are currently not used
+// const innovation2 = "https://res.cloudinary.com/dbwuxxypx/image/upload/innovation-2.png"
+// const innovation3 = "https://res.cloudinary.com/dbwuxxypx/image/upload/innovation-3.png"
 
 export default function Home() {
 
@@ -190,8 +190,8 @@ export default function Home() {
             </div>
           </div>
           <div className="order-1 lg:order-2">
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl shadow-xl border border-gray-100">
-              <Image src={innovation1} alt="Quality dental work" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px" className="object-cover" />
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl shadow-xl border border-gray-100 bg-gray-100 flex items-center justify-center">
+              <span className="text-gray-400">Quality dental work image</span>
             </div>
           </div>
         </div>
