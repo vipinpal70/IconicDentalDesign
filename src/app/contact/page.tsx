@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Clock, Plus } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import FAQSection from './faq';
 
 export default function ContactPage() {

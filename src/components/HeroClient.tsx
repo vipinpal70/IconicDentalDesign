@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 type Props = {
   slidesCount: number;
@@ -11,22 +10,22 @@ type Props = {
 export default function HeroClient({ slidesCount, trackId }: Props) {
   const [current, setCurrent] = useState(0);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const trackRef = useRef<HTMLDivElement | null>(null);
 
-  const applyTransform = (index: number) => {
-    const track = document.getElementById(trackId);
-    if (track) {
-      (track as HTMLDivElement).style.transform = `translateX(-${index * 100}%)`;
-    }
-  };
+  const applyTransform = useCallback((index: number) => {
+    if (!trackRef.current) return;
+    const width = trackRef.current.offsetWidth;
+    trackRef.current.style.transform = `translateX(-${index * width}px)`;
+  }, []);
 
-  const goTo = (index: number) => {
+  const goTo = useCallback((index: number) => {
     const normalized = (index + slidesCount) % slidesCount;
     setCurrent(normalized);
     applyTransform(normalized);
-  };
+  }, [applyTransform, slidesCount]);
 
-  const next = () => goTo(current + 1);
-  const prev = () => goTo(current - 1);
+  const next = useCallback(() => goTo(current + 1), [current, goTo]);
+  const prev = useCallback(() => goTo(current - 1), [current, goTo]);
 
   useEffect(() => {
     // ensure initial transform is applied
@@ -42,7 +41,7 @@ export default function HeroClient({ slidesCount, trackId }: Props) {
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current);
     };
-  }, [slidesCount, trackId]);
+  }, [applyTransform, slidesCount, trackId]);
 
   return (
     <>

@@ -19,7 +19,7 @@ export default function Footer() {
           {/* Logo & Description - 4 columns on large screens, full width on mobile */}
           <div className="sm:col-span-2 lg:col-span-4 ml-4">
             <div className="flex items-center">
-              <a href="/">
+              <Link href="/">
                 <Image
                   src={logo}
                   alt="Iconic Dental Logo"
@@ -28,8 +28,7 @@ export default function Footer() {
                   className="mr-2"
                   style={{ width: "auto", height: "auto" }}
                 />
-              </a>
-              {/* <span className="text-xl sm:text-2xl font-bold">Iconic<span className="block text-xs sm:text-sm font-normal">Dental</span></span> */}
+              </Link>
             </div>
             <p className="mt-2 md:mt-2 text-sm leading-relaxed max-w-xs">
               At Iconic Dental, We have designed
