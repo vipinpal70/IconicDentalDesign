@@ -11,7 +11,7 @@ export default function FixedProthesisTop() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
         {/* Text Content */}
         <div className="space-y-6">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-teal-600 leading-tight">Fixed Prosthesis</h2>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-teal-700 leading-tight">Fixed Prosthesis</h2>
 
           <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
             Our fixed prosthesis solutions are engineered for durability, precision, and natural aesthetics. Iconic

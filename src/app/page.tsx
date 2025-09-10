@@ -1,11 +1,6 @@
 import Image from "next/image";
 import Hero from "@/components/Hero";
 import YouTubePlayer from "@/components/YouTubePlayer";
-import aboutImg from "@/assets/about_us_photo.jpg";
-import innovation1 from "@/assets/innovation-1.png";
-import innovation2 from "@/assets/innovation-2.png";
-import innovation3 from "@/assets/innovation-3.png";
-
 
 const services = [
   { title: "Fixed Prosthesis", image_url: "https://res.cloudinary.com/dbwuxxypx/image/upload/FullContour_uirzw7.png" },
@@ -16,6 +11,10 @@ const services = [
   { title: "Models", image_url: "https://res.cloudinary.com/dbwuxxypx/image/upload/Full-Arch-w_qoiwvi.png" },
 ];
 
+const aboutImg = "https://res.cloudinary.com/dbwuxxypx/image/upload/about_us_img_yautl7.png"
+const innovation1 = "https://res.cloudinary.com/dbwuxxypx/image/upload/innovation-1.png"
+const innovation2 = "https://res.cloudinary.com/dbwuxxypx/image/upload/innovation-2.png"
+const innovation3 = "https://res.cloudinary.com/dbwuxxypx/image/upload/innovation-3.png"
 
 export default function Home() {
 

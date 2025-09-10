@@ -4,7 +4,7 @@ import React from 'react'
 function Privacy() {
     return (
         <>
-            <main className="min-h-screen bg-white">
+            <main className="min-h-screen bg-white font-['Poppins']">
                 <div className="mx-auto max-w-6xl px-6 py-16 md:py-24 lg:px-8">
                     {/* Page Title */}
                     <div className="mb-12 text-center font-['Poppins']">
@@ -31,7 +31,7 @@ function Privacy() {
                                 It is completely optional for you to participate and provide this information. For example, we request information from you when you:
                             </span>
                             <span>
-                                <ul className="ml-6 space-y-1 list-disc font-poppins">
+                                <ul className="ml-6 space-y-1 list-disc font-['Poppins']">
                                     <li>Request information about a product or service</li>
                                     <li>Sign-up for email updates and marketing information</li>
                                     <li>Provide feedback in an online form</li>
