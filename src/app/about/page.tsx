@@ -1,24 +1,22 @@
 "use client";
 
-// app/about/page.tsx  (if using Next.js App Router)
-// OR pages/about.tsx  (if using Pages Router)
-
 import Image from "next/image";
 import YouTubeVideo from "@/components/YouTubeVideo";
 import { useState } from "react";
 
-import about_us_photo from "../../assets/about_us_photo.jpg";
-import innovation1 from "../../assets/innovation-1.png";
-import innovation2 from "../../assets/innovation-2.png";
-import innovation3 from "../../assets/innovation-3.png";
+const about_us_photo = "https://res.cloudinary.com/dbwuxxypx/image/upload/about_us_img_yautl7.png";
+const Wide_angle = "https://res.cloudinary.com/dbwuxxypx/image/upload/Wide_angle_k8x9nr.png";
+const Tailored = "https://res.cloudinary.com/dbwuxxypx/image/upload/Tailored_j9gh5i.png";
+const Exceptional_Services = "https://res.cloudinary.com/dbwuxxypx/image/upload/Exceptional-Services_qmoazw.png";
+const rising_bar = "https://res.cloudinary.com/dbwuxxypx/image/upload/raising_bar_img_ykkihd.png"
 
 export default function AboutPage() {
   const [isPlaying, setIsPlaying] = useState(false);
   return (
     <main className="w-full">
       {/* Hero Section */}
-      <section className="bg-white text-center px-4 sm:px-6 py-8 sm:py-10 md:py-20">
-        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-teal-700 px-2">
+      <section className="bg-white text-center px-4 sm:px-6 py-8 sm:py-4 md:py-4">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-teal-700 px-2 mt-6">
           We Don&apos;t Just Design Smiles
         </h1>
         <p className="text-base sm:text-lg md:text-xl text-gray-600 mt-2 font-semibold px-2">
@@ -53,21 +51,21 @@ export default function AboutPage() {
         </div>
 
         {/* Stats */}
-        <div className="flex flex-wrap justify-center h-auto sm:h-80 md:h-96 -mt-16 sm:-mt-24 md:-mt-36 gap-4 sm:gap-6 md:gap-10 lg:gap-20 bg-gray-200 py-6 px-2 sm:py-8 sm:px-4">
+        <div className="flex flex-wrap justify-center h-auto sm:h-80 md:h-72 -mt-16 sm:-mt-24 md:-mt-36 gap-4 sm:gap-6 md:gap-10 lg:gap-20 bg-gray-200 py-2 px-2 sm:py-8 sm:px-4">
           <div className="text-center mt-16 sm:mt-20 md:mt-24 pt-8 sm:pt-12 md:pt-16 w-[40%] sm:w-auto">
-            <h2 className="text-2xl sm:text-2xl md:text-3xl font-extrabold text-teal-800 font-['Poppins']">1000 +</h2>
+            <h2 className="text-3xl sm:text-3xl md:text-5xl font-extrabold text-teal-800 font-['Poppins']">1000 +</h2>
             <p className="text-sm sm:text-base text-gray-600">Happy Clients</p>
           </div>
           <div className="text-center mt-16 sm:mt-20 md:mt-24 pt-8 sm:pt-12 md:pt-16 w-[40%] sm:w-auto">
-            <h2 className="text-2xl sm:text-2xl md:text-3xl font-extrabold text-teal-800 font-['Poppins']">4 +</h2>
+            <h2 className="text-3xl sm:text-3xl md:text-5xl font-extrabold text-teal-800 font-['Poppins']">4 +</h2>
             <p className="text-sm sm:text-base text-gray-600">Year Experience</p>
           </div>
           <div className="text-center mt-16 sm:mt-20 md:mt-24 pt-8 sm:pt-12 md:pt-16 w-[40%] sm:w-auto">
-            <h2 className="text-2xl sm:text-2xl md:text-3xl font-extrabold text-teal-800 font-['Poppins']">50 +</h2>
+            <h2 className="text-3xl sm:text-3xl md:text-5xl font-extrabold text-teal-800 font-['Poppins']">50 +</h2>
             <p className="text-sm sm:text-base text-gray-600">Designers</p>
           </div>
           <div className="text-center mt-16 sm:mt-20 md:mt-24 pt-8 sm:pt-12 md:pt-16 w-[40%] sm:w-auto">
-            <h2 className="text-2xl sm:text-2xl md:text-3xl font-extrabold text-teal-800 font-['Poppins']">≥ 5%</h2>
+            <h2 className="text-3xl sm:text-3xl md:text-5xl font-extrabold text-teal-800 font-['Poppins']">≥ 5%</h2>
             <p className="text-sm sm:text-base text-gray-600">Redesign factor</p>
           </div>
         </div>
@@ -84,9 +82,9 @@ export default function AboutPage() {
                 <Image 
                   src={about_us_photo} 
                   alt="Dental Design Software" 
-                  width={600} 
+                  width={600}
                   height={450}
-                  className="w-full h-auto object-cover"
+                  className="w-full h-[450px] object-cover"
                   priority
                 />
               </div>
@@ -155,38 +153,38 @@ export default function AboutPage() {
           <div className="bg-teal-700 text-white rounded-lg p-4 sm:p-5 md:p-6 shadow-md">
             <div className="relative aspect-[2/1] w-full">
               <Image
-                src={innovation1}
-                alt="Innovation 1"
+                src={Wide_angle}
+                alt="Wide Angle"
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="rounded-md object-cover"
               />
             </div>
-            <h3 className="mt-3 sm:mt-4 text-base sm:text-lg font-semibold">Tailored Designs</h3>
+            <h3 className="m-3 sm:mt-4 text-gray-600 sm:text-lg font-semibold text-center bg-white p-1 rounded-xl">Tailored Designs</h3>
           </div>
           <div className="bg-teal-700 text-white rounded-lg p-4 sm:p-5 md:p-6 shadow-md">
             <div className="relative aspect-[2/1] w-full">
               <Image
-                src={innovation2}
-                alt="Innovation 2"
+                src={Tailored}
+                alt="Tailored"
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="rounded-md object-cover"
               />
             </div>
-            <h3 className="mt-3 sm:mt-4 text-base sm:text-lg font-semibold">Wide Range of Options</h3>
+            <h3 className="mt-3 sm:mt-4  text-gray-600 sm:text-lg font-semibold text-center bg-white p-1 rounded-xl">Wide Range of Options</h3>
           </div>
           <div className="bg-teal-700 text-white rounded-lg p-4 sm:p-5 md:p-6 shadow-md sm:col-span-2 lg:col-span-1">
             <div className="relative aspect-[2/1] w-full">
               <Image
-                src={innovation3}
-                alt="Innovation 3"
+                src={Exceptional_Services}
+                alt="Exceptional Services"
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 33vw"
                 className="rounded-md object-cover"
               />
             </div>
-            <h3 className="mt-3 sm:mt-4 text-base sm:text-lg font-semibold">Exceptional Customer Service</h3>
+            <h3 className="mt-3 sm:mt-4  text-gray-600 sm:text-lg font-semibold text-center bg-white p-1 rounded-xl">Exceptional Customer Service</h3>
           </div>
         </div>
       </section>
@@ -245,11 +243,11 @@ export default function AboutPage() {
             <div className="w-full md:w-1/2">
               <div className="rounded-lg overflow-hidden">
                 <Image 
-                  src={about_us_photo} 
+                  src={rising_bar} 
                   alt="Advanced Dental Technology" 
-                  width={600} 
+                  width={600}
                   height={450}
-                  className="w-full h-auto object-cover"
+                  className="w-full h-[450px] object-cover"
                 />
               </div>
             </div>

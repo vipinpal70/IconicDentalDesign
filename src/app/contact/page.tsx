@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Plus } from 'lucide-react';
+import FAQSection from './faq';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -12,8 +13,6 @@ export default function ContactPage() {
     productCategory: '',
     acceptTerms: false
   });
-
-  const [activeQuestion, setActiveQuestion] = useState<number | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value, type } = e.target as HTMLInputElement;
@@ -29,33 +28,6 @@ export default function ContactPage() {
     console.log('Form submitted:', formData);
     // Reset form or show success message
   };
-
-  const toggleQuestion = (index: number) => {
-    setActiveQuestion(activeQuestion === index ? null : index);
-  };
-
-  const faqQuestions = [
-    {
-      question: "What dental services does Iconic Dental Studio offer?",
-      answer: "We offer a comprehensive range of dental design services including crown & bridges, digital dentures, veneers, and implants. Our team specializes in creating precise, aesthetically pleasing dental solutions tailored to each patient's unique needs."
-    },
-    {
-      question: "How does Iconic Dental Studio ensure precision in designs?",
-      answer: "We utilize state-of-the-art digital technology and CAD/CAM systems, combined with our team's extensive expertise. Each design undergoes multiple quality checks and is created by highly skilled designers with years of industry experience."
-    },
-    {
-      question: "What sets Iconic Dental Studio apart in dental design?",
-      answer: "Our combination of cutting-edge technology, experienced designers, and personalized service sets us apart. We've created our own design library, curated by skilled designers and ceramists, ensuring unique and high-quality results for every case."
-    },
-    {
-      question: "What type of implants do you offer?",
-      answer: "We offer various implant solutions including single-tooth implants, implant-supported bridges, and full-arch implant restorations. Our designs are compatible with major implant systems and can be customized to meet specific clinical requirements."
-    },
-    {
-      question: "How do I place an order or submit a case to your lab?",
-      answer: "You can submit cases through our online portal, via email, or by contacting our customer service team directly. We provide detailed instructions for case submission, including required information and materials needed for optimal results."
-    }
-  ];
 
   return (
     <main className="w-full">
@@ -291,43 +263,8 @@ export default function ContactPage() {
           
         </div>
       {/* FAQ Section */}
-      <section className="bg-white px-4 py-10 md:py-14 max-w-6xl mx-auto">
-        <div className="mb-6 md:mb-8">
-          <h2 className="text-sm font-medium text-teal-600 uppercase">FAQ</h2>
-          <h3 className="text-2xl md:text-3xl font-bold text-teal-700 mt-2">
-            Frequently Ask Questions
-          </h3>
-          <p className="text-gray-600 mt-2 text-sm md:text-base">
-            Find quick answers to common questions about our services, processes, and partnership details.
-          </p>
-        </div>
+      <FAQSection />  
 
-        <div className="space-y-3 md:space-y-4">
-          {faqQuestions.map((faq, index) => (
-            <div key={index} className="border-b border-gray-200 pb-3 md:pb-4">
-              <button
-                className="flex justify-between items-center w-full text-left py-2 md:py-3"
-                onClick={() => toggleQuestion(index)}
-              >
-                <h4 className="text-base md:text-lg font-medium text-gray-800">{faq.question}</h4>
-                <div className="bg-white border border-gray-200 rounded-md p-1 md:p-1.5">
-                  <Plus
-                    size={18}
-                    className={`transform transition-transform text-teal-700 ${
-                      activeQuestion === index ? 'rotate-45' : ''
-                    }`}
-                  />
-                </div>
-              </button>
-              {activeQuestion === index && (
-                <div className="mt-2 text-gray-600 pl-1 pb-2 text-sm md:text-base">
-                  <p>{faq.answer}</p>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-      </section>
     </main>
   );
 }

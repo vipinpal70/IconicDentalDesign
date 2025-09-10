@@ -3,8 +3,10 @@
 import Image from "next/image";
 import { Mail, Phone, Menu, X } from "lucide-react";
 import Link from "next/link";
-import logo_image from "../assets/logo.jpg";
 import { useState } from "react";
+
+
+const logo_image = "https://res.cloudinary.com/dbwuxxypx/image/upload/header_logo_nahr0f.png"
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -38,7 +40,7 @@ const Header = () => {
       </div>
 
       {/* Main Header */}
-      <div className="w-full container mx-auto py-2 sm:py-4 shadow-lg border-b border-[#E9E9E9] px-20">
+      <div className="w-full py-2 sm:py-2 border-b border-[#E9E9E9] px-20">
         <div className="bg-white flex flex-row items-center justify-between w-full">
           {/* Logo */}
           <Link href="/" className="">
