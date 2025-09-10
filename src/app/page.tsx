@@ -6,12 +6,22 @@ import innovation1 from "@/assets/innovation-1.png";
 import innovation2 from "@/assets/innovation-2.png";
 import innovation3 from "@/assets/innovation-3.png";
 
+
+const services = [
+  { title: "Fixed Prosthesis", image_url: "https://res.cloudinary.com/dbwuxxypx/image/upload/FullContour_uirzw7.png" },
+  { title: "Removable Prosthesis", image_url: "https://res.cloudinary.com/dbwuxxypx/image/upload/digital-dentures_qgedtp.png" },
+  { title: "Appliances Splints", image_url: "https://res.cloudinary.com/dbwuxxypx/image/upload/Night-gaurd_bn92ga.png" },
+  { title: "Cosmetic Dentistry", image_url: "https://res.cloudinary.com/dbwuxxypx/image/upload/Veeners_w1mrdq.png" },
+  { title: "Implants", image_url: "https://res.cloudinary.com/dbwuxxypx/image/upload/All-on-X_vcimrw.png" },
+  { title: "Models", image_url: "https://res.cloudinary.com/dbwuxxypx/image/upload/Full-Arch-w_qoiwvi.png" },
+];
+
+
 export default function Home() {
+
   return (
     <main className="min-h-screen w-[100vw] overflow-x-hidden">
       <Hero />
-      {/* <div className="h-[90vh] w-[100vw]">
-      </div> */}
       
       <div className="w-[95%] sm:w-[90%] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -129,22 +139,26 @@ export default function Home() {
       </section>
 
       {/* Services grid */}
-      <section id="services" className="container mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
-        <h3 className="text-center text-2xl font-bold text-gray-900">Dental Design Services</h3>
-        <p className="text-center text-gray-600 mt-2 max-w-2xl mx-auto">From crowns and bridges to full-arch restorations, explore our comprehensive digital workflow services.</p>
-
+      <section id="services" className="w-[95%] sm:w-[90%] max-w-7xl container mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 ">
+        <p className="text-base sm:text-lg md:text-xl text-teal-800 mt-2 font-light px-2 text-center">
+        Our Offerings
+        </p>
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-teal-700 px-2 mt-6 text-center">
+      Dental Design Services
+        </h1>
+        <p className="text-base sm:text-lg md:text-xl text-gray-600 mt-2 font-medium px-2 text-center">
+        At Iconic Dental, we provide a full range of dental design solutions tailored to meet each patient’s needs. From natural-looking restorations to advanced cosmetic treatments, our experienced team ensures every service is delivered with precision, comfort, and care. 
+        </p>
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[{img: innovation1, title: 'Crown & Bridge'}, {img: innovation2, title: 'Digital Denture'}, {img: innovation3, title: 'Implants'}, {img: innovation1, title: 'Veneers'}, {img: innovation2, title: 'Clear Aligners'}, {img: innovation3, title: 'Inlays & Onlays'}].map((s, i) => (
-            <div key={i} className="group rounded-xl border border-gray-200 overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow">
-              <div className="relative aspect-[4/3]">
-                <Image src={s.img} alt={s.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px" className="object-cover" />
+          {services.map((s, i) => (
+            <div key={i} className="group rounded-xl border border-gray-200 overflow-hidden  shadow-sm hover:shadow-md transition-shadow">
+              <div className="relative aspect-[4/3]  bg-gray-300">
+                <Image src={s.image_url} alt={s.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px" className="object-cover p-12" />
               </div>
-              <div className="p-4 flex items-center justify-between">
-                <div>
-                  <p className="font-semibold text-gray-900">{s.title}</p>
-                  <p className="text-sm text-gray-600">Learn more</p>
+              <div className="p-4 flex items-center justify-center bg-teal-700">
+                <div className="flex items-center justify-center">
+                  <p className="font-semibold text-white text-center">{s.title}</p>
                 </div>
-                <span className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-teal-600/10 text-teal-700 font-bold">→</span>
               </div>
             </div>
           ))}
