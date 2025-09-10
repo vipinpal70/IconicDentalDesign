@@ -4,29 +4,24 @@ import { useState } from "react";
 
 const faqData = [
   {
-    question: "What is a fixed prosthesis?",
-    answer:
-      "A fixed prosthesis is a permanent dental restoration that replaces missing teeth and is cemented or bonded to existing teeth or dental implants. Unlike removable dentures, fixed prostheses cannot be taken out by the patient and provide a stable, long-lasting solution for tooth replacement.",
+    question: "What is a removable prosthesis?",
+    answer: "A removable prosthesis is a dental appliance that can be taken out and reinserted by the patient. It replaces missing teeth and surrounding tissues, helping to restore function and appearance. Unlike fixed prostheses, these can be removed for cleaning and maintenance.",
   },
   {
-    question: "How long does a fixed prosthesis last?",
-    answer:
-      "With proper care and maintenance, a fixed prosthesis can last 10-15 years or even longer. The lifespan depends on oral hygiene, dental checkups, and habits like grinding or biting force.",
+    question: "What are the different types of removable prostheses?",
+    answer: "There are several types including complete dentures (for patients with no remaining teeth), partial dentures (for patients with some natural teeth remaining), and overdentures (which fit over dental implants).",
   },
   {
-    question: "What materials are used for fixed prostheses?",
-    answer:
-      "Fixed prostheses can be made from porcelain, ceramic, zirconia, gold alloys, or porcelain-fused-to-metal depending on durability and aesthetic needs.",
+    question: "How do I care for my removable prosthesis?",
+    answer: "Clean your prosthesis daily with a soft-bristled brush and non-abrasive cleaner. Remove it at night to give your gums a rest. Soak it in water or a cleaning solution when not in use, and handle it carefully to avoid damage.",
   },
   {
-    question: "How is a fixed prosthesis made?",
-    answer:
-      "The process includes consultation, tooth preparation, impressions, temporary placement, lab fabrication, and final bonding or cementation.",
+    question: "How long does a removable prosthesis last?",
+    answer: "With proper care, removable prostheses typically last 5-7 years. However, they may need adjustments or relining as your mouth changes over time. Regular dental check-ups are important to ensure proper fit and function.",
   },
   {
-    question: "Can fixed prostheses be placed on dental implants?",
-    answer:
-      "Yes, implant-supported fixed prostheses are common and provide excellent stability when replacing multiple missing teeth.",
+    question: "Will a removable prosthesis affect my speech or eating?",
+    answer: "There may be an adjustment period of a few weeks where speech and eating feel different. With practice, most people adapt well. Starting with soft foods and reading aloud can help speed up the adaptation process.",
   },
 ];
 
